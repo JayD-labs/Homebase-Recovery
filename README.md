@@ -2,35 +2,35 @@
 
 **Version:** 1.0.0
 **Status:** Stable Release
-**Release-Datum:** 17.06.2026
+**Release Date:** 2026-06-17
 
-Homebase Recovery ist das Wiederherstellungs- und Installationssystem für Homebase-Core.
+Homebase Recovery is the installation and recovery framework for Homebase Core.
 
-Ziel ist es, einen Raspberry Pi nach einer Neuinstallation, einem SD-Karten-Ausfall oder einem Hardwarewechsel innerhalb weniger Minuten wieder betriebsbereit zu machen.
+Its purpose is to restore a Raspberry Pi system after a fresh installation, SD card failure, hardware replacement, or system corruption within just a few minutes.
 
 ---
 
 # Features
 
-* Automatisierte Installation aller Homebase-Komponenten
-* Homebase-Core Projektstruktur
-* Docker Installation
-* Samba Netzwerkfreigaben
-* Backup-System mit systemd-Timer
-* WLAN KeepAlive & Auto-Reconnect
-* Recovery- und Wiederherstellungsfunktionen
+* Automated installation of all Homebase components
+* Homebase Core project structure creation
+* Docker installation and setup
+* Samba network shares
+* Automated backup system with systemd timers
+* Wi-Fi KeepAlive & Auto-Reconnect
+* Recovery and restoration utilities
 
 ---
 
-# Enthaltene Skripte
+# Included Scripts
 
 ## INSTALL_ALL.sh
 
-Zentraler Installer für Homebase Recovery.
+Main installer for Homebase Recovery.
 
-Installiert alle verfügbaren Komponenten oder ermöglicht eine benutzerdefinierte Auswahl.
+Installs all available components or allows custom selection.
 
-### Ausführung
+### Usage
 
 ```bash
 cd ~/Homebase-Recovery
@@ -47,9 +47,9 @@ chmod +x *.sh
 
 ## INSTALL_STRUCTURE.sh
 
-Erstellt die vollständige Homebase-Core Verzeichnisstruktur.
+Creates the complete Homebase Core directory structure.
 
-### Ausführung
+### Usage
 
 ```bash
 chmod +x INSTALL_STRUCTURE.sh
@@ -61,17 +61,17 @@ chmod +x INSTALL_STRUCTURE.sh
 
 ## INSTALL_KEEPALIVE.sh
 
-Installiert das Homebase KeepAlive System.
+Installs the Homebase KeepAlive system.
 
-### Funktionen
+### Features
 
-* WLAN KeepAlive
-* WLAN Auto-Reconnect
-* WLAN Powersave deaktivieren
-* Nutzung des systemd Hardware-Watchdogs
-* Automatische Netzwerkwiederherstellung
+* Wi-Fi KeepAlive
+* Automatic Wi-Fi reconnect
+* Disables Wi-Fi power saving
+* Uses the systemd hardware watchdog
+* Automatic network recovery
 
-### Ausführung
+### Usage
 
 ```bash
 chmod +x INSTALL_KEEPALIVE.sh
@@ -83,18 +83,18 @@ sudo ./INSTALL_KEEPALIVE.sh
 
 ## INSTALL_DOCKER.sh
 
-Installiert Docker und die Homebase Docker Umgebung.
+Installs Docker and the Homebase Docker environment.
 
-### Funktionen
+### Features
 
-* Docker Installation
-* Docker Compose Unterstützung
-* Docker Netzwerk
-* Optionale Portainer Installation
-* Optionale Watchtower Installation
-* Homebase Docker Struktur
+* Docker installation
+* Docker Compose support
+* Dedicated Docker network
+* Optional Portainer installation
+* Optional Watchtower installation
+* Homebase Docker directory structure
 
-### Ausführung
+### Usage
 
 ```bash
 chmod +x INSTALL_DOCKER.sh
@@ -106,16 +106,16 @@ sudo ./INSTALL_DOCKER.sh
 
 ## INSTALL_SAMBA.sh
 
-Installiert und konfiguriert Samba Netzwerkfreigaben.
+Installs and configures Samba network shares.
 
-### Funktionen
+### Features
 
-* Benutzererkennung
-* Passwortvergabe
-* Frei definierbare Freigaben
-* Konfigurierbare Zugriffsrechte
+* User detection
+* Password configuration
+* Customizable shared folders
+* Configurable access permissions
 
-### Ausführung
+### Usage
 
 ```bash
 chmod +x INSTALL_SAMBA.sh
@@ -127,19 +127,19 @@ sudo ./INSTALL_SAMBA.sh
 
 ## INSTALL_BACKUP.sh
 
-Installiert das Homebase Backup System.
+Installs the Homebase Backup System.
 
-### Funktionen
+### Features
 
-* Daily Backups
-* Weekly Backups
-* Monthly Backups
-* Manual Backups
-* Emergency Backups
-* Systemd Timer
-* Konfigurierbare Backup-Ziele
+* Daily backups
+* Weekly backups
+* Monthly backups
+* Manual backups
+* Emergency backups
+* Systemd timer integration
+* Configurable backup destinations
 
-### Ausführung
+### Usage
 
 ```bash
 chmod +x INSTALL_BACKUP.sh
@@ -149,9 +149,9 @@ sudo ./INSTALL_BACKUP.sh
 
 ---
 
-# Empfohlene Installation
+# Recommended Installation
 
-Für einen neuen Raspberry Pi:
+For a fresh Raspberry Pi setup:
 
 ```bash
 cd ~/Homebase-Recovery
@@ -164,7 +164,7 @@ chmod +x *.sh
 ./INSTALL_ALL.sh
 ```
 
-Nach erfolgreicher Installation:
+After installation:
 
 ```bash
 sudo reboot
@@ -172,11 +172,12 @@ sudo reboot
 
 ---
 
-# Projektstruktur
+# Project Structure
 
 ```text
 Homebase-Recovery
 │
+├── Changelog.md
 ├── README.md
 ├── .gitignore
 │
@@ -190,14 +191,29 @@ Homebase-Recovery
 
 ---
 
-# Ziel
+# Mission
 
-Homebase Recovery bildet die technische Grundlage für Homebase-Core.
+Homebase Recovery serves as the foundation of the Homebase ecosystem.
 
-Das System soll die Bereitstellung, Wartung und Wiederherstellung von Raspberry-Pi-basierten Homebase-Systemen vereinfachen und automatisieren.
+The goal is to simplify deployment, maintenance, backup, and recovery of Raspberry Pi-based Homebase systems through automation and standardized tooling.
 
 ---
 
-# Lizenz
+# Roadmap
 
-Derzeit private Entwicklung im Rahmen des Homebase-Projekts.
+Planned future additions:
+
+* Automated Homebase Core deployment
+* One-click restore from backup
+* Remote recovery capabilities
+* Docker container templates
+* Homebase Web Dashboard integration
+* Hardware monitoring and health checks
+
+---
+
+# License
+
+Currently under private development as part of the Homebase Core project.
+
+License details will be added once the project becomes publicly available.
