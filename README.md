@@ -217,3 +217,11 @@ Planned future additions:
 Currently under private development as part of the Homebase Core project.
 
 License details will be added once the project becomes publicly available.
+
+## Developer
+
+Project: Homebase-AIWorker
+
+Owner: JayD-Labs
+
+Status: Private Development Project
